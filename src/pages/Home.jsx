@@ -1,41 +1,30 @@
-import { motion } from "framer-motion"
 import Navbar from "../components/Navbar"
+import About from "../sections/About"
+import Projects from "../sections/Projects"
 
 function Home() {
   return (
+    <div className="h-screen bg-black text-white">
 
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
-        <Navbar />
-      {/* glow in the background */}
-      <div className="absolute w-[500px] h-[500px] rounded-full bg-purple-700 blur-[120px] opacity-30"></div>
+      <Navbar />
+      <About />
+      <Projects />
 
-      <motion.div
-        initial={{opacity:0,y:60}}
-        animate={{opacity:1,y:0}}
-        transition={{duration:1}}
-
-        className="z-10 text-center"
-      >
+      <div className="flex flex-col items-center justify-center h-full">
 
         <h1 className="text-6xl font-black bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text">
-
-          ArcanaStay 🌙
-
+          Maria-Nectaria's Portfolio
         </h1>
 
         <p className="mt-4 text-gray-400">
-
-          Discover mystical places around the world
-
+          Computer Science student documenting my journey through code 🚀
         </p>
 
-        <button className="mt-8 px-8 py-4 rounded-full bg-purple-600 hover:bg-purple-700">
-
-          Explore Magic ✨
-
+        <button className="mt-8 px-8 py-4 rounded-full bg-purple-600">
+          Explore My Work ✨
         </button>
 
-      </motion.div>
+      </div>
 
     </div>
   )
